@@ -1,0 +1,9 @@
+ol{
+    /* list-style: ; */
+    padding: 0;
+    margin: 1;
+    position: relative; /* this will force the li to be positioned with respect
+                           to this block level container */
+    border: 1px solid gray;
+    height: 200px;
+}
