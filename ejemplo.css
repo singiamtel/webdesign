@@ -1,47 +1,50 @@
-        td {
-            vertical-align: top;
-        }
+td {
+	vertical-align: top;
+	padding: 15 3px;
+}
 
-        .position {
-            font-weight: bold;
-        }
 
-        .poster {
-            width: 150px;
-            height: 225px;
-        }
+.actor a {
+	text-decoration: none;
+	/* color: #666666; */
+	font-size: 14px;
+	line-height: 15px;
+}
 
-        .title {
-            font-weight: bold;
-            text-decoration: none;
-            color: #333333;
-            font-size: 16px;
-        }
+.actor a:hover {
+	text-decoration: underline;
+}
 
-        .country {
-            width: 18px;
-            height: 12px;
-        }
+.index {
+	font-weight: bold;
+}
 
-        .director {
-            text-decoration: none;
-            color: #326E9C;
-            font-size: 18px;
-            line-height: 20px
-        }
+.portada {
+	width: 150px;
+	margin-right: 15px;
+	border-radius: 5px;
+	box-shadow: 2px 3px 4px #BBBBBB;
+}
 
-        .director:hover {
-            text-decoration: underline
-        }
 
-        .actor a {
-            text-decoration: none;
-            color: #666666;
-            font-size: 16px;
-            line-height: 15px;
-        }
+.country {
+	width: 18px;
+}
 
-        .actor a:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
+.director {
+	color: #326E9C;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 20px
+}
+
+.director:hover {
+	text-decoration: underline
+}
+
+.title {
+	color: #333333;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+}
