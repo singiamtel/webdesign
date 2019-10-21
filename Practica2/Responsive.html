@@ -1,7 +1,75 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="Responsive.css">
+		<style>
+			@media screen and (max-width: 700px){
+				header{
+					display:none;
+				}
+				section{
+					width:100%;
+				}
+				aside{
+					width:100%;
+				}
+				.content{
+					display:flex;
+					flex-direction:column;
+				}
+			}
+		</style>
+		<title>Media Queries y FlexBox</title>
 	</head>
 	<body>
+		<header><strong>FlexWeb</strong></header>
+		<nav>
+			<strong>
+				<a class="navlink" href="">Link</a> <a class="navlink" href="">Link</a> <a class="navlink" href="">Link</a> <a class="navlink" href="">Link</a>
+			</strong>
+		</nav>
+		<div class="content">
+			<aside>
+				<div class="aside">
+					<h1>
+						About me
+					</h1>
+					<strong>
+						Photo of me:
+					</strong>
+				</div>
+				<article>
+					<div class="text-margin">
+						image
+					</div>
+				</article>
+				<div class="aside">
+					Some text about me in culpa qui officia desenrunt mollit anim...
+				</div>
+			</aside>
+			<section>
+				<div class="aside">
+					<h1>
+						TITLE HEADING
+					</h1>
+					<strong>
+						Title description, Dec 7, 2017
+					</strong>
+				</div>
+				<article>
+					<div class="text-margin">
+						image
+					</div>
+				</article>
+				<div class="aside">
+					Some text...<br><br>
+					Sunt in culpa qui officia desenrunt mollit anim id est laborum consectetur
+					sunt in culpa qui officia desenrunt mollit anim id est laborum consectetur
+					sunt in culpa qui officia desenrunt mollit anim id est laborum consectetur.
+				</div>
+			</section>
+		</div>
+		<footer> <strong>Footer</strong> </footer>
 	</body>
 </html>
