@@ -21,7 +21,6 @@ nav{
 body{
 	display:flex;
 	flex-direction: column;
-	flex-wrap: row wrap;
 }
 .content {
 	display:inline-flex;
