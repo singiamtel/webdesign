@@ -1,0 +1,10 @@
+body {
+	display:flex;
+	flex-direction:column;
+}
+.movie{
+	display:inline-flex;
+}
+li {
+	vertical-align: top
+}
