@@ -1,10 +1,19 @@
 body {
 	display:flex;
 	flex-direction:column;
+	font: 13px/1.231 Arial, sans-serif;
 }
 .movie{
 	display:inline-flex;
+	flex-direction:row;
+	border-bottom:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	width=70%;
 }
-li {
-	vertical-align: top
+.cover{
+	width:100px;
+}
+.info{
+	margin-right:10px;
+	flex:0.6;
 }
