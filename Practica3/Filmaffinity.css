@@ -3,17 +3,97 @@ body {
 	flex-direction:column;
 	font: 13px/1.231 Arial, sans-serif;
 }
+.listrank{
+	font-weight:bold;
+	margin-right:20px;
+}
 .movie{
 	display:inline-flex;
 	flex-direction:row;
+	/* width:800px; */
 	border-bottom:1px solid #DDDDDD;
-	border-right:1px solid #DDDDDD;
-	width=70%;
+	border-spacing:5px;
+	padding:15px;
+}
+ol{
+	padding-inline-start: 0px;
+}
+a {
+text-decoration: none;color:#326E9C;
 }
 .cover{
 	width:100px;
+	height:150px;
+}
+.critics{
+	padding-left:30px;
+	/* flex:0.2; */
+}
+.movieinfo{
+	display:inline-flex;
+}
+.rating{
+	background-color:#4682B4;
+	margin-top:30px;
+	color:#FFF;
+	padding-left:10px;
+	padding-top:10px;
+	width:40px;
+	/* padding-right:3px; */
+	padding-bottom:10px;
+	border-radius: 8px;
+	font-size:26px;
+}
+.audience{
+	margin-top:10px;
+}
+.userimg{
+	width:15px;
+}
+.actors{
+	line-height: 1.2em;
+	padding-right:20px;
+	max-height: 3.6em;
+	overflow:hidden;
+	/* white-space:wrap; */
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow:ellipsis;
+	/* padding-right:200px; */
 }
 .info{
-	margin-right:10px;
-	flex:0.6;
+	flex:0.8;
+	border-right:1px solid #DDDDDD;
+	margin-bottom:5px;
+}
+@media screen and (max-width: 400px){
+	.info{
+		border-right:none;
+	}
+	.movie{
+		display:inline-flex;
+		flex-direction:column;
+	}
+	.info{
+		display:inline;
+		flex-direction:row;
+	}
+	.listrank{
+	display:none;
+	}
+	.critics{
+		margin:0px;
+		flex-direction:row;
+		display:flex;
+		padding:0px;
+	}
+	.rating{
+		margin-top:0px;
+		margin-right:10px;
+	}
+	.actors{
+	max-height: 1.2em;
+	-webkit-line-clamp: 1;
+	}
 }
