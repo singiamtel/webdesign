@@ -15,6 +15,9 @@ body {
 	border-spacing:5px;
 	padding:15px;
 }
+.metadata{
+	display:inline-flex;
+}
 ol{
 	padding-inline-start: 0px;
 }
@@ -73,7 +76,7 @@ text-decoration: none;color:#326E9C;
 	}
 	.movie{
 		display:inline-flex;
-		flex-direction:column;
+		flex-direction:row;
 	}
 	.info{
 		display:inline;
@@ -81,6 +84,9 @@ text-decoration: none;color:#326E9C;
 	}
 	.listrank{
 	display:none;
+	}
+	.metadata{
+		flex-direction:column;
 	}
 	.critics{
 		margin:0px;
