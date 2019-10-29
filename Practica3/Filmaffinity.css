@@ -10,19 +10,20 @@ body {
 .movie{
 	display:inline-flex;
 	flex-direction:row;
-	/* width:800px; */
 	border-bottom:1px solid #DDDDDD;
 	border-spacing:5px;
 	padding:15px;
 }
 .metadata{
 	display:inline-flex;
+	flex:1;
 }
 ol{
 	padding-inline-start: 0px;
 }
 a {
-text-decoration: none;color:#326E9C;
+	text-decoration: none;
+	color:#326E9C;
 }
 .cover{
 	width:100px;
@@ -42,7 +43,6 @@ text-decoration: none;color:#326E9C;
 	padding-left:10px;
 	padding-top:10px;
 	width:40px;
-	/* padding-right:3px; */
 	padding-bottom:10px;
 	border-radius: 8px;
 	font-size:26px;
@@ -58,21 +58,21 @@ text-decoration: none;color:#326E9C;
 	padding-right:20px;
 	max-height: 3.6em;
 	overflow:hidden;
-	/* white-space:wrap; */
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	text-overflow:ellipsis;
-	/* padding-right:200px; */
 }
 .info{
 	flex:0.8;
 	border-right:1px solid #DDDDDD;
 	margin-bottom:5px;
 }
+/* Media query */
 @media screen and (max-width: 400px){
 	.info{
 		border-right:none;
+		line-height:2em;
 	}
 	.movie{
 		display:inline-flex;
@@ -101,5 +101,8 @@ text-decoration: none;color:#326E9C;
 	.actors{
 	max-height: 1.2em;
 	-webkit-line-clamp: 1;
+	}
+	.audience{
+		margin-top:16px;
 	}
 }
