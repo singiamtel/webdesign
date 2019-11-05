@@ -1,0 +1,84 @@
+/*
+fuente: Arial, sans-serif de 13px
+color de fondo: #e8e8e8
+
+tamaño de fuente del nombre de la liga: 16px en negrita
+tamaño de las imágenes: 20px
+*/
+body{
+	background-color:#e8e8e8;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+}
+.league{
+	text-align:center;
+	font-size: 16px;
+	font-weight:bold;
+}
+.card{
+	background-color:#FFF;
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	justify-content:center;
+    box-shadow: 5px 5px 20px -8px #808080;
+}
+.matchname{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.teams{
+	display:inline-flex;
+	justify-content:center;
+	flex-direction:row;
+	margin-bottom:10px;
+}
+.score{
+	display:inline-flex;
+	padding-left:14px;
+	padding-right:14px;
+	height:30px;
+	margin-left:5px;
+	margin-right:5px;
+	line-height:30px;
+	border: 1px solid #E9E9E9;
+	border-radius:5px;
+}
+.teamimg{
+	flex:0;
+	height:20px;
+	line-height:20px;
+	margin-top:5px;
+	margin-right:5px;
+	margin-left:5px;
+}
+.team1{
+	display:inline-flex;
+	line-height:32px;
+}
+.teamname{
+	display:inline-flex;
+}
+.team2{
+	display:inline-flex;
+	line-height:32px;
+	flex-direction:row-reverse;
+}
+/* Media Query */
+@media screen and (max-width: 300px){
+	.teams{
+		flex-direction:column;
+	}
+	.team1{
+		flex-direction:row;
+		justify-content:space-between;
+		margin-bottom:10px;
+	}
+	.team2{
+		flex-direction:row;
+		justify-content:space-between;
+	}
+	.score{
+		margin-right:20px;
+	}
+}
