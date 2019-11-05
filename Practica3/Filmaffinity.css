@@ -80,7 +80,6 @@ a {
 	}
 	.info{
 		display:inline;
-		flex-direction:row;
 	}
 	.listrank{
 	display:none;
