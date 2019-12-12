@@ -12,7 +12,6 @@ function get_dog_list(){
 			var json = con.response;
 			for (let i in json.message) {
 				// TODO add subspecies
-				// i = i.charAt(0).toUpperCase() + i.slice(1);
 				input_selector.innerHTML += `<option value="${i}">${i}</option>`;
 			}
 		}
