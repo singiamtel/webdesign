@@ -1,0 +1,34 @@
+.inputmenu{
+	display:flex;
+	justify-content:center;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.input{
+	margin-left:5px;
+}
+.image{
+	height:100px;
+	margin-right:10px;
+	margin-bottom:5px;
+	transition:500ms;
+}
+.image:hover{
+	height:130px;
+	transition:500ms;
+}
+.overlay{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:fixed;
+	opacity:0;
+	pointer-events: none;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index:1; /* Forces it to be at the top */
+}
+.fullimg{
+	opacity:1;
+}
