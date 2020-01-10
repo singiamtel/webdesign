@@ -1,0 +1,62 @@
+body{
+	font-size:18px;
+}
+.movie{
+	z-index:2;
+	display:flex;
+	flex-direction:row;
+	padding:50px;
+}
+.poster{
+	height:500px;
+	margin-right:15px;
+}
+.details{
+	display:flex;
+	flex-direction:column;
+}
+.title{
+	font-size:30px;
+	margin-bottom:10px;
+}
+.flags{
+	margin-left:10px;
+}
+.imgflag{
+	margin-right:10px;
+	width:45px;
+	transform: translate(0,12px);
+}
+.title{
+	margin-bottom:20px;
+}
+.director{
+	margin-bottom:20px;
+}
+.directorName{
+	margin-bottom:30px;
+}
+.cast{
+	margin-bottom:20px;
+}
+.castNames{
+	margin-bottom:30px;
+}
+.overview{
+	margin-bottom:20px;
+}
+.overlay{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:fixed;
+	pointer-events: none;
+	width:100%;
+	height:100%;
+}
+.backImg{
+	opacity:0.3;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
