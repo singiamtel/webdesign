@@ -1,0 +1,97 @@
+body {
+	background-color: #333333;
+}
+.allusers{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-top:35px;
+}
+.user {
+	background-color:#505050;
+	padding:15px;
+	color:#FFFFFF;
+	border-radius:15px;
+	border:2px solid;
+	border-color:white;
+	display:flex;
+	width:600px;
+	margin-bottom:15px;
+}
+.info{
+	display:flex;
+	flex:1;
+}
+.leftside{
+	display:flex;
+	flex-direction:column;
+	margin-left:15px;
+	margin-right:10px;
+	margin-bottom:10px;
+	padding-right:10px;
+	flex:1;
+	border-right:1px solid;
+}
+.rightside{
+	display:flex;
+	flex:0.8;
+	flex-direction:column;
+	margin-bottom:10px;
+}
+.userimg{
+	border-radius:50px;
+	width:100px;
+	height:100px;
+}
+.name{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.email{
+	margin-bottom:7px;
+}
+.twitter{
+	margin-bottom:7px;
+}
+.date{
+	margin-bottom:7px;
+}
+.cell{
+	margin-bottom:7px;
+}
+.street{
+	margin-bottom:7px;
+}
+.city{
+	margin-left:15px;
+}
+.postCountry{
+	margin-left:15px;
+}
+.like{
+	user-select: none;
+	text-align:center;
+	display:block;
+	width:100px;
+	background-color:#FFFF02;
+	color:black;
+	border-radius:15px;
+	border-color:white;
+	border-width:1px;
+	border-style:solid;
+	cursor:pointer;
+}
+@media screen and (max-width: 600px){
+	.user{
+		width:80%;
+	}
+	.info{
+		flex-direction:column;
+	}
+	.leftside{
+		border:none;
+	}
+	.rightside{
+		margin-left:15px;
+	}
+}
