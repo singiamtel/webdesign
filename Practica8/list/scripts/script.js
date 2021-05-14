@@ -1,11 +1,11 @@
-var body = document.querySelector("body");
-var list = document.querySelector(".list");
-var input = document.querySelector("#movieInput");
+const body = document.querySelector("body");
+const list = document.querySelector(".list");
+const input = document.querySelector("#movieInput");
 
 input.focus();
 
 function XMLRequest(url, callback){
-	var con = new XMLHttpRequest();
+	const con = new XMLHttpRequest();
 	con.responseType = 'json';
 	con.open('GET', url);
 	con.onreadystatechange = function () {
@@ -36,12 +36,12 @@ function loadMovies(){
 loadMovies(); // Call inmediately
 
 function fetchMovieCredits(id, div_director, div_actors, divFlag){
-	var con = new XMLHttpRequest();
+	const con = new XMLHttpRequest();
 	con.responseType = 'json';
 	con.onreadystatechange = function () {
 		if(con.readyState === 4 && con.status === 200){
 			const json_meta = con.response;
-			for (var i = 0 ; i<json_meta.crew.length; i++) {
+			for (let i = 0 ; i<json_meta.crew.length; i++) {
 				if(json_meta.crew[i].job === "Director") {
 					div_director.innerHTML = `<a href=""> ${json_meta.crew[i].name} </a>`;
 					break;
@@ -50,7 +50,7 @@ function fetchMovieCredits(id, div_director, div_actors, divFlag){
 			// Value defaults to "NO DATA" if unset
 			if(div_director.innerHTML === "") div_director.innerHTML = `<a href="">NO DATA</a>`;
 			div_actors.innerHTML = "";
-			for (var i = 0 ; i<10; i++) {
+			for (let i = 0 ; i<10; i++) {
 				// Some movies don't get to 10 actors
 				if(json_meta.cast[i] == undefined) break;
 				div_actors.innerHTML += json_meta.cast[i].name + ", ";
@@ -63,7 +63,7 @@ function fetchMovieCredits(id, div_director, div_actors, divFlag){
 	con.open('GET', 'https://api.themoviedb.org/3/movie/' + id + '/credits?api_key=3109a8b52a2b9477564cdfe422add54f');
 	con.send();
 
-	var con2 = new XMLHttpRequest();
+	const con2 = new XMLHttpRequest();
 	con2.responseType = 'json';
 	con2.onreadystatechange = function () {
 		if(con2.readyState === 4 && con2.status === 200){
@@ -79,24 +79,23 @@ function fetchMovieCredits(id, div_director, div_actors, divFlag){
 }
 
 function loadData(json){
-	var ul = document.createElement("ul");
-	var counter = 1;
-	for (var i = 0 ; i < json.results.length; i++) {
+	const ul = document.createElement("ul");
+	for (let i = 0 ; i < json.results.length; i++) {
 
 		let id = json.results[i].id;
-		var divActors = document.createElement("div");
-		var divAudience = document.createElement("div");
-		var divCritics = document.createElement("div");
-		var divDirector = document.createElement("div");
-		var divInfo = document.createElement("div");
-		var divTitle = document.createElement("div");
-		var divListrank = document.createElement("div");
-		var divMetadata = document.createElement("div");
-		var divMovie = document.createElement("div");
-		var divRating = document.createElement("div");
-		var imgAudience = document.createElement("img");
-		var imgCover = document.createElement("img");
-		var divFlag = document.createElement("div");
+		const divActors = document.createElement("div");
+		const divAudience = document.createElement("div");
+		const divCritics = document.createElement("div");
+		const divDirector = document.createElement("div");
+		const divInfo = document.createElement("div");
+		const divTitle = document.createElement("div");
+		const divListrank = document.createElement("div");
+		const divMetadata = document.createElement("div");
+		const divMovie = document.createElement("div");
+		const divRating = document.createElement("div");
+		const imgAudience = document.createElement("img");
+		const imgCover = document.createElement("img");
+		const divFlag = document.createElement("div");
 
 		divActors.className = "actors";
 
@@ -116,7 +115,7 @@ function loadData(json){
 		divTitle.onclick = function(){showSearched(id)};
 
 		divListrank.className = "listrank";
-		divListrank.innerHTML = counter;
+		divListrank.innerHTML = i + 1;
 
 		divMetadata.className = "metadata";
 
@@ -137,7 +136,6 @@ function loadData(json){
 		imgCover.onclick = function(){showSearched(id)};
 
 		divFlag.className = "flag";
-		// divFlag.src = `https://www.filmaffinity.com/imgs/countries/${json.results[i].production_countries[0].toUpperCase()}.jpg`;
 
 		/*
 		Adding childs should follow this structure
@@ -169,7 +167,6 @@ function loadData(json){
 		divMovie.appendChild(divMetadata);
 		ul.appendChild(divMovie);
 
-		++counter;
 	}
 	list.innerHTML = "";
 	list.appendChild(ul);

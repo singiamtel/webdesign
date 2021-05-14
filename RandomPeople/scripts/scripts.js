@@ -1,8 +1,8 @@
-var allUsers = document.querySelector(".allusers");
-var like = document.querySelector(".like");
+const allUsers = document.querySelector(".allusers");
+const like = document.querySelector(".like");
 
 function XMLRequest(url, callback){
-	var con = new XMLHttpRequest();
+	const con = new XMLHttpRequest();
 	con.responseType = 'json';
 	con.open('GET', url);
 	con.onreadystatechange = function () {

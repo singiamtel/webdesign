@@ -1,12 +1,12 @@
-var url_string = window.location.href;
-var url = new URL(url_string);
-var id = url.searchParams.get("id");
-var body = document.querySelector("body");
-var movie = document.querySelector(".movie");
-var overlay = document.querySelector(".overlay");
+const url_string = window.location.href;
+const url = new URL(url_string);
+const id = url.searchParams.get("id");
+const body = document.querySelector("body");
+const movie = document.querySelector(".movie");
+const overlay = document.querySelector(".overlay");
 
 function XMLRequest(url, callback){
-	var con = new XMLHttpRequest();
+	const con = new XMLHttpRequest();
 	con.responseType = 'json';
 	con.open('GET', url);
 	con.onreadystatechange = function () {
@@ -22,7 +22,6 @@ XMLRequest('https://api.themoviedb.org/3/movie/' + id + '?api_key=3109a8b52a2b94
 
 function loadData(json){
 	document.title = json.original_title;
-	// TODO FLAG
 	movie.innerHTML = `<div class="posterImg"><img class="poster" src="https://image.tmdb.org/t/p/w500/${json.poster_path}"></div>
 		<div class="details">
 		<span class="title"><strong>${json.original_title}</strong> (${json.release_date.substring(0,4)})<span class="flags"></span></span>
@@ -35,7 +34,6 @@ function loadData(json){
 
 		<span class="overview"><strong>Overview</strong></span>
 		<span class="overviewContent">${json.overview}</span>
-
 
 		</div>`;
 	let flags = document.querySelector(".flags");
@@ -53,25 +51,25 @@ function loadData(json){
 }
 
 function fetchMovieCredits(id, div_director, div_actors, divFlag){
-	var con = new XMLHttpRequest();
+	const con = new XMLHttpRequest();
 	con.responseType = 'json';
 	con.onreadystatechange = function () {
 		if(con.readyState === 4 && con.status === 200){
 			const json_meta = con.response;
-			for (var i = 0 ; i<json_meta.crew.length; i++) {
+			for (let i = 0 ; i<json_meta.crew.length; i++) {
 				if(json_meta.crew[i].job === "Director") {
 					div_director.innerHTML = json_meta.crew[i].name;
 					break;
 				}
 			}
 			// Value defaults to "NO DATA" if unset
-			if(div_director.innerHTML === "") div_director.innerHTML = `<a href="">NO DATA</a>`;
-			for (var i = 0 ; i<10; i++) {
+			if(!div_director.innerHTML) div_director.innerHTML = `<a href="">NO DATA</a>`;
+			for (let i = 0 ; i<10; i++) {
 				// Some movies don't get to 10 actors
-				if(json_meta.cast[i] == undefined) break;
+				if(json_meta.cast[i] === undefined) break;
 				div_actors.innerHTML += json_meta.cast[i].name + ", ";
 			}
-			// Removes last comma
+			// Adds ellipsis at the end
 			div_actors.innerHTML = div_actors.innerHTML.substring(0, div_actors.innerHTML.length-2);
 			div_actors.innerHTML += "...";
 		}
